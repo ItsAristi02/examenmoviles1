@@ -2,12 +2,12 @@ package org.example.clases;
 
 public class Jugador {
 
-    public String nombre;
-    public int edad;
-    public String apellidos; //principalmente la variable estaba declarada como boolean
-    public String posición;
-    public int numeroCamiseta;
-    public String equipo;
+    private String nombre;
+    private int edad;
+    private String apellidos; //principalmente la variable estaba declara como tipo boleean, se hizo la correción
+    private String posicionJugador;
+    private int numeroCamiseta;
+    private String equipo;
 
     public Jugador() {
     }
@@ -16,7 +16,7 @@ public class Jugador {
         this.nombre = nombre;
         this.edad = edad;
         this.apellidos = apellidos;
-        this.posición = posición;
+        this.posicionJugador = posición;
         this.numeroCamiseta = numeroCamiseta;
         this.equipo = equipo;
     }
@@ -45,12 +45,12 @@ public class Jugador {
         this.apellidos = apellidos;
     }
 
-    public String getPosición() {
-        return posición;
+    public String getPosicionJugador() {
+        return posicionJugador;
     }
 
-    public void setPosición(String posición) {
-        this.posición = posición;
+    public void setPosicionJugador(String posicionJugador) {
+        this.posicionJugador = posicionJugador;
     }
 
     public int getNumeroCamiseta() {
@@ -67,5 +67,9 @@ public class Jugador {
 
     public void setEquipo(String equipo) {
         this.equipo = equipo;
+    }
+
+    public String toString(){
+        return "\n"+ numeroCamiseta +" "+ nombre +" "+ apellidos + " "+ edad + " "+ posicionJugador + " " + equipo;
     }
 }
